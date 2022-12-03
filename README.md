@@ -31,6 +31,35 @@ Microsoft Sentinel is a cloud-native SIEM system that a security operations team
 1. Threat hunting
 1. Incidents and investigations
 1. Automation playbooks
+![01-end-to-end](https://user-images.githubusercontent.com/108787059/205441529-a616e13a-982d-4114-bcb0-fe2939996603.svg)
 
 
 Microsoft Sentinel workspace
+
+Single-tenant single workspace
+![single-tenant-workspace](https://user-images.githubusercontent.com/108787059/205441652-79dbed21-48a0-4faa-876c-d16ba12ea2cc.png)
+
+Single-tenant with regional Microsoft Sentinel workspaces
+![single-tenant-regional-workspace](https://user-images.githubusercontent.com/108787059/205441664-cd1652b4-0a5e-4b79-b2c0-53474e2621c2.png)
+
+Multi-tenant workspaces
+![multi-tenant-workspaces](https://user-images.githubusercontent.com/108787059/205441668-f2482989-ac0b-474d-92d2-3d5579479a64.png)
+
+Use the same log analytics workspace as Microsoft Defender for Cloud
+
+Create a Microsoft Sentinel workspace
+To enable Microsoft Sentinel, you need contributor permissions to the subscription in which the Microsoft Sentinel workspace resides. To use Microsoft Sentinel, you need either contributor or reader permissions on the resource group that the workspace belongs.
+Microsoft Sentinel-specific roles
+All Microsoft Sentinel built-in roles grant read access to the data in your Microsoft Sentinel workspace:
+
+Microsoft Sentinel Reader: can view data, incidents, workbooks, and other Microsoft Sentinel resources.
+
+Microsoft Sentinel Responder: can, in addition to the above, manage incidents (assign, dismiss, etc.)
+
+Microsoft Sentinel Contributor: can, in addition to the above, create and edit workbooks, analytics rules, and other Microsoft Sentinel resources.
+
+Microsoft Sentinel Automation Contributor: allows Microsoft Sentinel to add playbooks to automation rules. It isn't meant for user accounts.
+
+For best results, these roles should be assigned to the resource group that contains the Microsoft Sentinel workspace. The roles then apply to all the resources that deploy to support Microsoft Sentinel, if those resources are in the same resource group.
+![image](https://user-images.githubusercontent.com/108787059/205442362-979c288a-74b9-47bd-8d06-42176ab6274c.png)
+
