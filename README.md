@@ -1,9 +1,9 @@
 # Meetup-Azure-Microsoft-365-Community-Microsoft-Sentinelt 
 
-** What is security information and event management (SIEM)?**
+1. ** What is security information and event management (SIEM)?**
 
-A SIEM system is a tool that an organization uses to collect, analyze, and perform security operations on its computer systems. Those systems can be hardware appliances, applications, or both.
-A SOAR is xxxxxxxxxxxxxxxxxxxxxxxxx
+A **SIEM** system is a tool that an organization uses to collect, analyze, and perform security operations on its computer systems. Those systems can be hardware appliances, applications, or both.
+A **SOAR** is xxxxxxxxxxxxxxxxxxxxxxxxx
 
 In its simplest form, a SIEM system enables you to:
 
@@ -18,7 +18,7 @@ A SIEM system might offer functionality such as:
 * Incident management: The ability to create, update, assign, and investigate incidents that have been identified.
 * Querying data: A rich query language, similar to that for log management, that you can use to query and understand your data.
 
-**What is Microsoft Sentinel?**
+2. **What is Microsoft Sentinel?**
 Azure Sentinel is a Security Information and Event Management (SIEM) and Security Orchestration Automation Response (SOAR) solution from Microsoft
 Microsoft Sentinel is a cloud-native SIEM system that a security operations team can use to:
 
@@ -64,4 +64,14 @@ Microsoft Sentinel Automation Contributor: allows Microsoft Sentinel to add play
 
 For best results, these roles should be assigned to the resource group that contains the Microsoft Sentinel workspace. The roles then apply to all the resources that deploy to support Microsoft Sentinel, if those resources are in the same resource group.
 ![image](https://user-images.githubusercontent.com/108787059/205442362-979c288a-74b9-47bd-8d06-42176ab6274c.png)
+
+**3. Enable Microsoft Sentinel**
+Create a Log Analytics workspace, a storage account , a keyvault and a virtual machine
+
+**Data Connectors :**
+Connect Microsoft Defender For Cloud to Microsoft Sentinel :
+add a data connector and search for Microsoft Defender For Cloud
+Connect Azure Active Directory to Microsoft Sentinel :
+**Azure Sentinel Workbook**  : Monitor and visualize ingested data
+
 
