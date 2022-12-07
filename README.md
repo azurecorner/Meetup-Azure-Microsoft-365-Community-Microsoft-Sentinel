@@ -3,6 +3,7 @@
 ** What is security information and event management (SIEM)?**
 
 A SIEM system is a tool that an organization uses to collect, analyze, and perform security operations on its computer systems. Those systems can be hardware appliances, applications, or both.
+A SOAR is xxxxxxxxxxxxxxxxxxxxxxxxx
 
 In its simplest form, a SIEM system enables you to:
 
