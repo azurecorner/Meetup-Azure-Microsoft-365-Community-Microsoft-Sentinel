@@ -18,6 +18,7 @@ A SIEM system might offer functionality such as:
 * Querying data: A rich query language, similar to that for log management, that you can use to query and understand your data.
 
 **What is Microsoft Sentinel?**
+Azure Sentinel is a Security Information and Event Management (SIEM) and Security Orchestration Automation Response (SOAR) solution from Microsoft
 Microsoft Sentinel is a cloud-native SIEM system that a security operations team can use to:
 
 * Get security insights across the enterprise by collecting data from virtually any source.
