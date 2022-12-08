@@ -3,7 +3,8 @@
 ** What is security information and event management (SIEM)?**
 
 A SIEM system is a tool that an organization uses to collect, analyze, and perform security operations on its computer systems. Those systems can be hardware appliances, applications, or both.
-A SOAR is xxxxxxxxxxxxxxxxxxxxxxxxx
+A SOAR is Security Orchestration, Automation and Response 
+A set of software programs to collect  security threats from sources and respond to security events 
 
 In its simplest form, a SIEM system enables you to:
 
@@ -64,4 +65,14 @@ Microsoft Sentinel Automation Contributor: allows Microsoft Sentinel to add play
 
 For best results, these roles should be assigned to the resource group that contains the Microsoft Sentinel workspace. The roles then apply to all the resources that deploy to support Microsoft Sentinel, if those resources are in the same resource group.
 ![image](https://user-images.githubusercontent.com/108787059/205442362-979c288a-74b9-47bd-8d06-42176ab6274c.png)
+
+
+Thread hunting
+Threat hunting is the process of iteratively searching through a variety of data with the objective to identify threats in the systems.
+
+
+
+https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/AzureActivity/Creating_Anomalous_Number_Of_Resources.yaml
+
+https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/SigninLogs/DisabledAccountSigninAttempts.yaml
 
