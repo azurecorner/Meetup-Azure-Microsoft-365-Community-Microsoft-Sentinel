@@ -1,0 +1,6 @@
+AuditLogs
+| where OperationName == " Add member to role"
+| where Category == "RoleManagement"
+| where Result == "success"
+| where TargetResources contains "company administrator" or TargetResources contains "tenantadmins"
+| project TargetUser = tostring(TargetResources.[0].["userPrincipalName"])
