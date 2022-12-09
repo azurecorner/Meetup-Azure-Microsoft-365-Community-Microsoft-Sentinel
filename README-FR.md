@@ -54,20 +54,19 @@ Le tenant unique avec des Log Analytics workspaces Microsoft Sentinel régionaux
 
 pour gérer des Log Analytics workspaces  Microsoft Sentinel, qui n'est pas dans un seul tenant, il faudra  gerer des Log Analytics workspaces multi-tenants à l'aide d'Azure Lighthouse.
 
-Créer un espace de travail Microsoft Sentinel
-Pour activer Microsoft Sentinel, vous avez besoin d'autorisations de contributeur pour l'abonnement dans lequel réside l'espace de travail Microsoft Sentinel. Pour utiliser Microsoft Sentinel, vous avez besoin d'autorisations de contributeur ou de lecteur sur le groupe de ressources auquel appartient l'espace de travail.
-Rôles spécifiques à Microsoft Sentinel
-Tous les rôles intégrés Microsoft Sentinel accordent un accès en lecture aux données de votre espace de travail Microsoft Sentinel :
+**Créer un Log Analytics workspaces Microsoft Sentinel**
+Pour activer Microsoft Sentinel, vous avez besoin d'un role contributor pour la souscription dans lequel réside le Log Analytics workspaces Microsoft Sentinel. Pour utiliser Microsoft Sentinel, vous avez besoin du role contributor ou reader sur le groupe de ressources auquel appartient le Log Analytics workspaces
+**Rôles spécifiques à Microsoft Sentinel**
 
-Microsoft Sentinel Reader : peut afficher des données, des incidents, des classeurs et d'autres ressources Microsoft Sentinel.
+Microsoft Sentinel Reader : peut afficher des données, des incidents, des workbooks et d'autres ressources Microsoft Sentinel.
 
 Microsoft Sentinel Responder : peut, en plus de ce qui précède, gérer les incidents (assigner, rejeter, etc.)
 
-Contributeur Microsoft Sentinel : peut, en plus de ce qui précède, créer et modifier des classeurs, des règles d'analyse et d'autres ressources Microsoft Sentinel.
+Microsoft Sentinel Contributor : peut, en plus de ce qui précède, créer et modifier des workbooks, analytics rules et d'autres ressources Microsoft Sentinel.
 
-Microsoft Sentinel Automation Contributor : permet à Microsoft Sentinel d'ajouter des playbooks aux règles d'automatisation. Il n'est pas destiné aux comptes d'utilisateurs.
+Microsoft Sentinel Automation Contributor : permet à Microsoft Sentinel d'ajouter des playbooks aux règles d'automatisation. 
 
-Pour de meilleurs résultats, ces rôles doivent être attribués au groupe de ressources qui contient l'espace de travail Microsoft Sentinel. Les rôles s'appliquent ensuite à toutes les ressources déployées pour prendre en charge Microsoft Sentinel, si ces ressources se trouvent dans le même groupe de ressources.
+Pour de meilleurs résultats, ces rôles doivent être attribués au groupe de ressources qui contient le Log Analytics workspaces  Microsoft Sentinel. Les rôles s'appliquent ensuite à toutes les ressources déployées pour gérer Microsoft Sentinel, si ces ressources se trouvent dans le même groupe de ressources.
 ![image](https://user-images.githubusercontent.com/108787059/205442362-979c288a-74b9-47bd-8d06-42176ab6274c.png)
 
 **3. Activer Microsoft Sentinelle**
