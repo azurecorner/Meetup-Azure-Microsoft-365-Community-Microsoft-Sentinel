@@ -70,16 +70,19 @@ For best results, these roles should be assigned to the resource group that cont
 **3. Enable Microsoft Sentinel**
 Create a Log Analytics workspace, a storage account , a keyvault and a virtual machine
 
-**Data Connectors :**
-Connect Microsoft Defender For Cloud to Microsoft Sentinel :
-add a data connector and search for Microsoft Defender For Cloud
-Connect Azure Active Directory to Microsoft Sentinel :
-**Azure Sentinel Workbook**  : Monitor and visualize ingested data
-** Analytics alerts**
+**Data Connectors**
+
+**Azure Sentinel Workbook**  
+
+**Analytics alerts**
+
 **Thread hunting**
+
 Threat hunting is the process of iteratively searching through a variety of data with the objective to identify threats in the systems.
-** Incidents and investigations**
-** Automation playbooks**
+**Incidents and investigations**
+
+**Automation playbooks**
+
 
 
 https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/AzureActivity/Creating_Anomalous_Number_Of_Resources.yaml
