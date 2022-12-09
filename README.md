@@ -1,10 +1,9 @@
 # Meetup-Azure-Microsoft-365-Community-Microsoft-Sentinelt 
 
-1. ** What is security information and event management (SIEM)?**
+**1. What is security information and event management (SIEM)?**
 
 A SIEM system is a tool that an organization uses to collect, analyze, and perform security operations on its computer systems. Those systems can be hardware appliances, applications, or both.
-A SOAR is Security Orchestration, Automation and Response 
-A set of software programs to collect  security threats from sources and respond to security events 
+A SOAR is Security Orchestration, Automation and Response : A set of software programs to collect  security threats from sources and respond to security events 
 
 In its simplest form, a SIEM system enables you to:
 
@@ -21,32 +20,34 @@ A SIEM system might offer functionality such as:
 
 2. **What is Microsoft Sentinel?**
 Azure Sentinel is a Security Information and Event Management (SIEM) and Security Orchestration Automation Response (SOAR) solution from Microsoft
-Microsoft Sentinel is a cloud-native SIEM system that a security operations team can use to:
 
-* Get security insights across the enterprise by collecting data from virtually any source.
-* Detect and investigate threats quickly by using built-in machine learning and Microsoft threat intelligence.
-* Automate threat responses by using playbooks and by integrating Azure Logic Apps.
-
-1. Data connectors
-1. Log retention
-1. Workbooks
-1. Analytics alerts
-1. Threat hunting
-1. Incidents and investigations
-1. Automation playbooks
+In this session I will setup a Microsoft Sentinel Workspace and learn about the followings 
+* Data connectors
+* Workbooks
+*  Analytics alerts
+* Threat hunting
+* Incidents and investigations
+*  Automation playbooks
 ![01-end-to-end](https://user-images.githubusercontent.com/108787059/205441529-a616e13a-982d-4114-bcb0-fe2939996603.svg)
 
 
 Microsoft Sentinel workspace
 
-Single-tenant single workspace
+**Single-tenant single workspace**
 ![single-tenant-workspace](https://user-images.githubusercontent.com/108787059/205441652-79dbed21-48a0-4faa-876c-d16ba12ea2cc.png)
 
-Single-tenant with regional Microsoft Sentinel workspaces
+This workspace receives logs from resources in other regions within the same tenant. Because the log data (when collected) will travel across regions and stored in another region, this creates two possible concerns. First, it can incur a bandwidth cost. Second, if there's a data governance requirement to keep data in a specific region, the single workspace option wouldn't be an implementation option.
+
+**Single-tenant with regional Microsoft Sentinel workspaces**
 ![single-tenant-regional-workspace](https://user-images.githubusercontent.com/108787059/205441664-cd1652b4-0a5e-4b79-b2c0-53474e2621c2.png)
 
-Multi-tenant workspaces
+The single-tenant with regional Microsoft Sentinel workspaces will have multiple Sentinel workspaces requiring the creation and configuration of multiple Microsoft Sentinel and Log Analytics workspaces.
+* No central pane of glass. You aren't looking in one place to see all the data
+* Analytics, Workbooks, etc. must be deployed multiple times.
+**Multi-tenant workspaces**
 ![multi-tenant-workspaces](https://user-images.githubusercontent.com/108787059/205441668-f2482989-ac0b-474d-92d2-3d5579479a64.png)
+
+to manage a Microsoft Sentinel workspace, not in your tenant, you implement Multi-Tenant workspaces using Azure Lighthouse.
 
 Use the same log analytics workspace as Microsoft Defender for Cloud
 
@@ -74,12 +75,11 @@ Connect Microsoft Defender For Cloud to Microsoft Sentinel :
 add a data connector and search for Microsoft Defender For Cloud
 Connect Azure Active Directory to Microsoft Sentinel :
 **Azure Sentinel Workbook**  : Monitor and visualize ingested data
-
-
-
-Thread hunting
+** Analytics alerts**
+**Thread hunting**
 Threat hunting is the process of iteratively searching through a variety of data with the objective to identify threats in the systems.
-
+** Incidents and investigations**
+** Automation playbooks**
 
 
 https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/AzureActivity/Creating_Anomalous_Number_Of_Resources.yaml
