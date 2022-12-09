@@ -38,23 +38,21 @@ Un SOAR est Security Orchestration, Automation and Response : un ensemble de log
 
 **Microsoft Sentinel workspace**
 
-**Single-tenant single workspace**
+**Single-tenant single Log Analytics workspaces**
 ![espace de travail à tenant unique](https://user-images.githubusercontent.com/108787059/205441652-79dbed21-48a0-4faa-876c-d16ba12ea2cc.png)
 
-Ce workspace (ou  espace de travail ) reçoit les journaux des ressources provenant d'autres régions sur le  même tenant. Étant donné que les données de journal (lorsqu'elles sont collectées) voyageront d'une région à l'autre et seront stockées dans une autre région, cela crée deux problèmes possibles. Tout d'abord, cela peut entraîner un coût de bande passante. Deuxièmement, s'il existe une exigence de gouvernance des données pour conserver les données dans une région spécifique, l'option d'utiliser un espace de travail unique ne serait pas une option de mise en œuvre.
+Ce Log Analytics workspaces (ou  espace de travail ) reçoit les journaux des ressources provenant d'autres régions sur le  même tenant. Étant donné que les données de journal (lorsqu'elles sont collectées) voyageront d'une région à l'autre et seront stockées dans une autre région, cela crée deux problèmes possibles. Tout d'abord, cela peut entraîner un coût de bande passante. Deuxièmement, s'il existe une exigence de gouvernance des données pour conserver les données dans une région spécifique, l'option d'utiliser un espace de travail unique ne serait pas une option de mise en œuvre.
 
-**tenant unique avec espaces de travail Microsoft Sentinel régionaux**
+**tenant unique avec des Log Analytics workspaces (espaces de travail) Microsoft Sentinel régionaux**
 ![espace de travail régional à tenant unique](https://user-images.githubusercontent.com/108787059/205441664-cd1652b4-0a5e-4b79-b2c0-53474e2621c2.png)
 
-Le tenant unique avec des espaces de travail Microsoft Sentinel régionaux disposera de plusieurs espaces de travail Sentinel nécessitant la création et la configuration de plusieurs espaces de travail Microsoft Sentinel et Log Analytics.
-* Pas de vitre centrale. Vous ne cherchez pas au même endroit pour voir toutes les données
+Le tenant unique avec des Log Analytics workspaces Microsoft Sentinel régionaux disposera de plusieurs Log Analytics workspaces Sentinel nécessitant la création et la configuration de plusieurs Log Analytics workspaces Microsoft Sentinel.
+* Pas de de gestion centrale. Vous ne cherchez pas au même endroit pour voir toutes les données
 * Analytics, Workbooks, etc. doivent être déployés plusieurs fois.
-**Multi-tenant workspaces**
+**Multi-tenant Log Analytics workspaces**
 ![espaces-de-travail-multi-tenants](https://user-images.githubusercontent.com/108787059/205441668-f2482989-ac0b-474d-92d2-3d5579479a64.png)
 
-pour gérer un espace de travail Microsoft Sentinel, pas dans votre tenant, vous implémentez des espaces de travail multi-tenants à l'aide d'Azure Lighthouse.
-
-Utiliser le même espace de travail d'analyse de journaux que Microsoft Defender pour le cloud
+pour gérer des Log Analytics workspaces  Microsoft Sentinel, qui n'est pas dans un seul tenant, il faudra  gerer des Log Analytics workspaces multi-tenants à l'aide d'Azure Lighthouse.
 
 Créer un espace de travail Microsoft Sentinel
 Pour activer Microsoft Sentinel, vous avez besoin d'autorisations de contributeur pour l'abonnement dans lequel réside l'espace de travail Microsoft Sentinel. Pour utiliser Microsoft Sentinel, vous avez besoin d'autorisations de contributeur ou de lecteur sur le groupe de ressources auquel appartient l'espace de travail.
